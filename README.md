@@ -1,6 +1,6 @@
-# Spotify Wrapper
+# TDD Boilerplate
 
-A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
+SIMPLE TDD BOILERPLATE TO JAVASCRIPT PROJECTS!
 
 ## Getting Started
 
