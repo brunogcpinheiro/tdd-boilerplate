@@ -4,15 +4,20 @@
   "description": "A Simple TDD Boilerplate to JavaScript Projects",
   "main": "main.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/*.js",
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test": "./node_modules/.bin/mocha src/__tests__/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha src/__tests__/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
   },
   "nyc": {
-    "reporter": ["text", "html"],
-    "exclude": ["tests/**"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "src/__tests__/**"
+    ]
   },
   "repository": {
     "type": "git",
